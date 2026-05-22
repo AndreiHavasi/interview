@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: interview-prep-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/interview}
+    username: ${SPRING_DATASOURCE_USERNAME:interview}
+    password: ${SPRING_DATASOURCE_PASSWORD:interview}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+interview:
+  content:
+    path: ${INTERVIEW_CONTENT_PATH:../content}
+  sandbox:
+    url: ${INTERVIEW_SANDBOX_URL:http://localhost:8081}
+  cors:
+    allowed-origins: http://localhost:5173

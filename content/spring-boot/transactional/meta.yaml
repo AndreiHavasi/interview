@@ -1,0 +1,8 @@
+title: "@Transactional and the proxy pattern"
+difficulty: 4
+tags: [spring-core, aop, frequently-asked]
+ro_companies: [endava, luxoft, ing-hubs, bitdefender]
+related:
+  - java-core/static-keyword
+sources:
+  - https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative.html
